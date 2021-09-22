@@ -2,17 +2,13 @@
 description: This page describes how to use Census with Outreach.
 ---
 
----
-description: Learn how to use Census with Outreach.
----
-
 # Outreach
 
 ## 🏃‍♂️ Getting Started
 
 This guide shows you how to use Census to connect your Outreach account to your data warehouse and create your first sync.
 
-### **Prerequisites**
+### Prerequisites
 
 Before you begin, you'll need the following:
 
