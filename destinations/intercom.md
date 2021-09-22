@@ -8,7 +8,7 @@ description: This page describes how to use Census with Intercom.
 
 In this guide, we will show you how to connect Intercom to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=RCKO3w-qw9g" %}
+{% embed url="https://www.youtube.com/watch?v=RCKO3w-qw9g" caption="" %}
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ Here you will have to write SQL queries to select the data you want to see in In
 * The date they became active in your product
 * The number of key activities a user did in your app in the last 7/30 days
 
-Once you have created your model, click save. 
+Once you have created your model, click save.
 
 ### 4. Create your first Sync
 
@@ -75,7 +75,7 @@ Next up is the **"Where do you want to sync data to?"** section
 * Pick Intercom as **the Connection**
 * For Object, pick the one you want to sync data to.
 
-For the " **How should changes to the source be synced?"** section 
+For the " **How should changes to the source be synced?"** section
 
 * Select your preferred behavior. **Update only** is a great place to start!
 * Pick the right mapping key, it could be Email for Contacts, Company ID for Companies but we recommend you use your own database id if possible
@@ -96,7 +96,7 @@ Now go back to your Intercom and go view a record type \(Contact or Company\) th
 
 ![](../.gitbook/assets/screely-1618113503713.png)
 
-That's it! In 5 steps, you've connected Intercom and started syncing customer & product data from your warehouse  🎉
+That's it! In 5 steps, you've connected Intercom and started syncing customer & product data from your warehouse 🎉
 
 ## 🗄 Supported Objects
 
@@ -105,7 +105,7 @@ Census currently supports syncing to the following Intercom objects.
 | **Object Name** | **Supported?** | Identifiers |
 | ---: | :---: | :--- |
 | Company | ✅ | Company ID |
-| Contact \(Lead or User\)  | ✅ | Email, Intercom ID, External ID |
+| Contact \(Lead or User\) | ✅ | Email, Intercom ID, External ID |
 | Lead | ✅ | Email, Intercom ID, External ID |
 | User | ✅ | Email, Intercom ID, External ID |
 

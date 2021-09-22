@@ -43,8 +43,7 @@ Now let's create your new Census connection to Pendo.
 2. You can provide whatever name you like.
 3. Copy and paste your new Pendo Integration key.  
 
-
-   ![](../.gitbook/assets/screely-1624583188453.png)
+![](../.gitbook/assets/screely-1624583188453.png)
 
 And you're all set and ready to get syncing! 🎉
 

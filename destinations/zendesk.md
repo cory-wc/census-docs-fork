@@ -27,8 +27,8 @@ Zendesk does things a little differently so heads up that there are a few gotcha
 
 #### Setting multiple organizations on a user
 
-Zendesk optionally allows users to be members of multiple organizations. \(You can find it under: Admin &gt; Customers &gt; Allow users to belong to multiple organizations\).  
-  
+Zendesk optionally allows users to be members of multiple organizations. \(You can find it under: Admin &gt; Customers &gt; Allow users to belong to multiple organizations\).
+
 When creating a User sync in Census, you can provide either a single External ID for the Organization, or a list of External IDs. If providing a list, you'll need to format them as a JSON array of strings, for example:
 
 ```text
@@ -39,10 +39,10 @@ Census will overwrite any existing organization relationships with the provided 
 
 #### Working with tags
 
-Zendesk's tags behave a little differently than other tools in that a ticket may "collect" tags over the course of its life. Users and Organizations are allowed to have tags. A ticket will automatically pick up the tags of a particular user and their org when the ticket is created.  
-  
-Additionally, when creating new custom dropdown fields or checkboxes, they can be configured to automatically add a tag to the Organization, User, or Ticket.   
-  
+Zendesk's tags behave a little differently than other tools in that a ticket may "collect" tags over the course of its life. Users and Organizations are allowed to have tags. A ticket will automatically pick up the tags of a particular user and their org when the ticket is created.
+
+Additionally, when creating new custom dropdown fields or checkboxes, they can be configured to automatically add a tag to the Organization, User, or Ticket.
+
 Because tags are so flexible, we generally suggest you use dropdowns and checkboxes for most Census data sync designs.
 
 However, if you're confident updating Tags directly is the right design for your use case, there's a couple of things to keep in mind:

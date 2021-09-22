@@ -8,7 +8,7 @@ description: This page describes how to use Census with Front.
 
 In this guide, we will show you how to connect Front to Census and create your first sync.
 
-{% embed url="https://www.loom.com/share/20857381085a40fbb707bb43b522ff9d" %}
+{% embed url="https://www.loom.com/share/20857381085a40fbb707bb43b522ff9d" caption="" %}
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ Here you can write SQL queries or select dbt models that contain the data you wa
 * The date they became active in your product
 * The number of key activities a user did in your app in the last 7/30 days
 
-Once you have created your model, click save. 
+Once you have created your model, click save.
 
 ![](../.gitbook/assets/front_step4.png)
 
@@ -77,7 +77,7 @@ Next up is the "Where do you want to sync data to?" section
 * Pick Front as the Connection
 * Pick Contact as the Object
 
-For the "How should changes to the source be synced?" section 
+For the "How should changes to the source be synced?" section
 
 * Select **Update Or Create**
 * Pick the appropriate mapping key, it could be email or a custom unique ID
@@ -102,9 +102,9 @@ If you have any questions or if you have any issues getting started, please cont
 
 ## 🏎 Sync Speed
 
-The Front API is pretty slow with a [default rate limit of 10 calls / minute](https://dev.frontapp.com/docs/core-api-getting-started#limitations). If you are on the Enterprise plan, this can be boosted to 200 calls / minute. 
+The Front API is pretty slow with a [default rate limit of 10 calls / minute](https://dev.frontapp.com/docs/core-api-getting-started#limitations). If you are on the Enterprise plan, this can be boosted to 200 calls / minute.
 
-Rest assured that Census will manage that API rate limit for you and ensure that all your syncs are successful. 
+Rest assured that Census will manage that API rate limit for you and ensure that all your syncs are successful.
 
 | **Service** | Public API rate limit | **Records sync / Minute** |
 | :--- | :--- | :--- |
@@ -118,7 +118,7 @@ Please note that you can contact your Front Customer Success Manager to increase
 
 ## 🗄️ Supported Objects
 
-Front has [many objects available via their API](https://dev.frontapp.com/reference/introduction), from Contacts, Conversations to Tags.  These are the objects we currently support in Census.
+Front has [many objects available via their API](https://dev.frontapp.com/reference/introduction), from Contacts, Conversations to Tags. These are the objects we currently support in Census.
 
 | **Object Name** | **Supported?** |
 | ---: | :---: |

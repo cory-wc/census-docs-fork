@@ -29,7 +29,7 @@ You will be redirected to a page to log in to Drift to authorize your account to
 
 ![](../.gitbook/assets/screen-shot-2021-04-22-at-4.02.13-pm.png)
 
-Once you've authorized Census, you'll be redirected back to the **Connections** page in Census and you should see your Drift connection there. 
+Once you've authorized Census, you'll be redirected back to the **Connections** page in Census and you should see your Drift connection there.
 
 If you want to see your integrations in Drift in the future, simply navigate to the **Settings** page, and click on **Integrations** in the left side navigation \(close to the bottom, right above **Help**\).
 
@@ -37,7 +37,7 @@ If you want to see your integrations in Drift in the future, simply navigate to 
 
 | **Object Name** | **Supported?** | Identifiers |
 | ---: | :---: | :--- |
-| Contact | ✅ | Object ID, any Text/Number  |
+| Contact | ✅ | Object ID, any Text/Number |
 
 [Contact us](mailto:support@getcensus.com) if you want Census to support more supported objects for Drift.
 

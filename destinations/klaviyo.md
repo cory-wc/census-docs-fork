@@ -8,7 +8,7 @@ description: This page describes how to use Census with Klaviyo.
 
 In this guide, we will show you how to connect Klaviyo to Census and create your first sync.
 
-{% embed url="https://youtu.be/U8q7E2SZJkI" %}
+{% embed url="https://youtu.be/U8q7E2SZJkI" caption="" %}
 
 ### Prerequisites
 

@@ -8,7 +8,7 @@ description: This page describes how to use Census with Mailchimp.
 
 In this guide, we will show you how to connect Mailchimp to Census and create your first sync.
 
-{% embed url="https://youtu.be/tu3hr3BV6Sg" %}
+{% embed url="https://youtu.be/tu3hr3BV6Sg" caption="" %}
 
 ### Prerequisites
 
@@ -47,7 +47,7 @@ For more details, take a look at Mailchimp's [API documentation](https://mailchi
 
 | **Object Name** | **Supported?** | Identifiers |
 | ---: | :---: | :--- |
-| Audience | ✅ | Object ID, any Text/Number  |
+| Audience | ✅ | Object ID, any Text/Number |
 
 ## 🔄 Supported Sync Behaviors
 

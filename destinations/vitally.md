@@ -41,8 +41,6 @@ Census uses your Vitally API key to send data. Before we can connect Census to V
 
 ![](../.gitbook/assets/screely-1615452326736.png)
 
-
-
 ## 🗄 Supported Objects
 
 | **Object Name** | **Supported?** | Matching Keys | Create Fields |
@@ -52,7 +50,7 @@ Census uses your Vitally API key to send data. Before we can connect Census to V
 | Event | 🔜 |  |  |
 | NPS | 🔜 |  |  |
 
-Vitally defines User ID and Account ID as the unique ID for these objects in your system. You are free to use whatever ID you like, but it needs to be unique. 
+Vitally defines User ID and Account ID as the unique ID for these objects in your system. You are free to use whatever ID you like, but it needs to be unique.
 
 ### User Behavior Notes
 

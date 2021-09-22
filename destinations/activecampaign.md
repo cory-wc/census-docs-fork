@@ -8,7 +8,7 @@ description: This page describes how to use Census with ActiveCampaign.
 
 ‌In this guide, we will show you how to connect ActiveCampaign to Census and create your first sync.
 
-{% embed url="https://youtu.be/lTc7u8rV7i4" %}
+{% embed url="https://youtu.be/lTc7u8rV7i4" caption="" %}
 
 ### Prerequisites
 

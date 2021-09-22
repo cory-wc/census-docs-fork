@@ -30,7 +30,7 @@ In this guide, we will show you how to connect Google Ads to Census.
 
 ![](../../.gitbook/assets/screely-1619113580005.png)
 
-Follow Google OAuth flow to connect your Google Ads account. 
+Follow Google OAuth flow to connect your Google Ads account.
 
 ![](../../.gitbook/assets/screely-1619118724964.png)
 

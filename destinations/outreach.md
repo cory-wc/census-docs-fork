@@ -15,11 +15,11 @@ Before you begin, you'll need the following:
 * Census account: If you don't have this already, [start with a free trial](https://app.getcensus.com/).
 * Outreach account: {Add details on what type of access is needed and link to Required Permissions section below.}
 * Credentials for your data warehouse: For details, see the guide for your specific technology.
-  * [Redshift](../source-warehouse/redshift.md)
-  * [Snowflake](../source-warehouse/snowflake.md)
-  * [Google BigQuery](../source-warehouse/google-bigquery.md)
-  * [Databricks](../source-warehouse/databricks.md)
-  * [Postgres](../source-warehouse/postgres.md)
+  * [Redshift](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/source-warehouse/redshift.md)
+  * [Snowflake](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/source-warehouse/snowflake.md)
+  * [Google BigQuery](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/source-warehouse/google-bigquery.md)
+  * [Databricks](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/source-warehouse/databricks.md)
+  * [Postgres](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/source-warehouse/postgres.md)
 
 ### Step 1: Connect Outreach
 
@@ -30,7 +30,7 @@ Before you begin, you'll need the following:
 
 Your end state should look something like this. 👇
 
-![{SCREEN}]({image%20URL})
+![{SCREEN}](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/%7Bimage%20URL%7D)
 
 ### Step 2: Connect your data warehouse
 
@@ -43,7 +43,7 @@ The steps for connecting your data warehouse will depend on your technology. See
 
 After connecting your warehouse, your **Connections** page will look something like this: 👇
 
-![{SCREEN}]({image%20URL})
+![{SCREEN}](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/%7Bimage%20URL%7D)
 
 ### Step 3: Create your model
 
@@ -54,7 +54,7 @@ When defining models, you'll write SQL queries to select the data you want to se
 3. Enter your SQL query. If you want to test the query, use the **Preview** button.
 4. Click **Save**.
 
-![{SCREEN}](image%20URL)
+![{SCREEN}](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/image%20URL)
 
 ### Step 4: Create your first sync
 
@@ -62,9 +62,9 @@ The sync will move data from your warehouse to Outreach. In this step, you'll de
 
 1. From inside your Census account, navigate to the [**Syncs**](https://app.getcensus.com/syncs) page.
 2. Under **What data do you want to sync?**, choose your data warehouse as the **Connection** and your model as the **Source**.
-3. Under **Where do you want to sync data to?**, choose Outreach as the **Connection** and an **Object** in Outreach. \(See [Supported Objects](./#supported-objects).\)
-4. Under **How should changes to the source be synced?**, choose **Update or Create**. \(See [Supported Sync Behaviors](./#supported-sync-behaviors).\)
-5. Under **How are source and destination records matched?**, select a mapping key. We recommend using an internal ID when possible. \(See [Supported Objects](./#supported-objects) for details.\)
+3. Under **Where do you want to sync data to?**, choose Outreach as the **Connection** and an **Object** in Outreach. \(See [Supported Objects](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/README.md#supported-objects).\)
+4. Under **How should changes to the source be synced?**, choose **Update or Create**. \(See [Supported Sync Behaviors](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/README.md#supported-sync-behaviors).\)
+5. Under **How are source and destination records matched?**, select a mapping key. We recommend using an internal ID when possible. \(See [Supported Objects](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/README.md#supported-objects) for details.\)
 6. Under **Which fields should be updated?**, select the fields you want to update by mapping a field in Outreach to a column in your model.
 7. Click **Next**. This will open the **Confirm Details** page where you can see a recap of your setup.
 8. If you want to start a sync immediately, set the **Run a sync now?** checkbox.
@@ -72,7 +72,7 @@ The sync will move data from your warehouse to Outreach. In this step, you'll de
 
 When configuring your sync, the page should look something like this: 👇
 
-![{SCREEN}]({image%20URL})
+![{SCREEN}](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/destinations/%7Bimage%20URL%7D)
 
 ### Step 5: Confirm the synced data in Outreach
 
@@ -95,7 +95,7 @@ In most cases, you won't run into any issue with sync speed based on rate limiti
 
 | **Object Name** | **Supported** | **Identifiers** |
 | ---: | :---: | :--- |
-| Account | ✅  | any Text field |
+| Account | ✅ | any Text field |
 | Prospect | ✅ | Email \(recommended\), any Text field |
 | User | ✅ | Email \(recommended\), any Text field |
 
@@ -104,7 +104,7 @@ In most cases, you won't run into any issue with sync speed based on rate limiti
 ### 🔄 Supported Sync Behaviors
 
 {% hint style="info" %}
-Learn about all of our sync behaviors in [Core Concepts](../basics/core-concept#sync-behaviors).
+Learn about all of our sync behaviors in [Core Concepts](https://github.com/cory-wc/census-docs-fork/tree/3000a4f6f5efacf2e9f41878d9a446a8e53b5ecb/basics/core-concept/README.md#sync-behaviors).
 {% endhint %}
 
 | **Behavior** | **Supported** | **Objects** |
@@ -120,3 +120,4 @@ Learn about all of our sync behaviors in [Core Concepts](../basics/core-concept#
 ### 🚑 Need Help Connecting to Outreach?
 
 You can send our [support team an email](mailto:support@getcensus.com) at support@getcensus.com or start a conversation from the in-app chat.
+

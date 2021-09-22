@@ -35,7 +35,7 @@ Your new Google Sheets connection will include your Google Identity email. Click
 
 ### 2. Share your target Google Sheet
 
-Now head to the Google Sheet you'd like to sync to. If you don't have one in mind, you can [create a new one](https://sheets.new). Either way, make sure your target Google Sheet has an empty tab inside it that Census can sync to, as the contents of which ever tab you select will be replaced by Census. 
+Now head to the Google Sheet you'd like to sync to. If you don't have one in mind, you can [create a new one](https://sheets.new). Either way, make sure your target Google Sheet has an empty tab inside it that Census can sync to, as the contents of which ever tab you select will be replaced by Census.
 
 To give Census access to your Google Sheet, press the Share button and then add paste the Google Identity email from Census into the share dialog and confirm.
 
@@ -43,7 +43,7 @@ To give Census access to your Google Sheet, press the Share button and then add 
 
 ### 3. Connect your data warehouse
 
-If this is your first Census sync, you'll also need to connect your data warehouse. Follow one of our short guides depending on your data warehouse 
+If this is your first Census sync, you'll also need to connect your data warehouse. Follow one of our short guides depending on your data warehouse
 
 * [Redshift](https://help.getcensus.com/article/10-configuring-redshift-postgresql-access)
 * [Postgres](https://help.getcensus.com/article/10-configuring-redshift-postgresql-access)
@@ -59,7 +59,7 @@ After setting up your warehouse, your Census Connections Page should look like t
 
 Now navigate to the [Census's models page.](https://app.getcensus.com/models)
 
-Here you will have to write SQL queries to select the data you want to send to your Google Sheet. Your model can be a complex query selecting details about customers and generating metrics, or as simple as a `SELECT * FROM ...`, it's up to you. Once you have created your model, click **Save Model**. 
+Here you will have to write SQL queries to select the data you want to send to your Google Sheet. Your model can be a complex query selecting details about customers and generating metrics, or as simple as a `SELECT * FROM ...`, it's up to you. Once you have created your model, click **Save Model**.
 
 ![](https://s3.amazonaws.com/helpscout.net/docs/assets/5bb7d5d0042863158cc71f7e/images/5f6563834cedfd00173b9a49/file-zg53SxxpoO.png)
 
@@ -77,7 +77,7 @@ Next up is the **"Where do you want to sync data to?"** section
 * Pick Google Sheets as **the Connection**
 * For Object, pick the Google Sheet you gave permission to in step 1 and select the tab within it that you want to sync to. As a reminder, Census will replace the contents of the tab you select so we recommend you only select a tab that's empty.
 
-For the " **How should changes to the source be synced?"** section 
+For the " **How should changes to the source be synced?"** section
 
 * **Mirror** will be preselected
 
@@ -98,7 +98,7 @@ Once the sync has completed, return to your Google Sheet and the specific tab yo
 
 ![](../.gitbook/assets/screely-1622879545045.png)
 
-That's it! In 6 steps, you've connected Google Sheets and started syncing data from your warehouse  🎉
+That's it! In 6 steps, you've connected Google Sheets and started syncing data from your warehouse 🎉
 
 ## 🗄 Supported Objects
 

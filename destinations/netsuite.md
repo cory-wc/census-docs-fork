@@ -8,7 +8,7 @@ description: This page describes how to use Census with NetSuite.
 
 In this guide, we will show you how to connect NetSuite to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=ITZzrwtCf7M" %}
+{% embed url="https://www.youtube.com/watch?v=ITZzrwtCf7M" caption="" %}
 
 ### Prerequisites
 
@@ -77,7 +77,7 @@ The Administrator user you're using with NetSuite and Census also needs "Token R
 
 ![](../.gitbook/assets/image-2021-05-03-at-4.42.55-pm.jpg)
 
-7. Under  **Permissions &gt; Lists**, Give your Role the appropriate permissions for the NetSuite objects you'll be updating. For example, to update Customers, you'll want to give this role the Lists &gt; Customers \(Full\) permission.
+1. Under  **Permissions &gt; Lists**, Give your Role the appropriate permissions for the NetSuite objects you'll be updating. For example, to update Customers, you'll want to give this role the Lists &gt; Customers \(Full\) permission.
 
 ![](../.gitbook/assets/netsuite_step5.png)
 
@@ -121,7 +121,7 @@ The last bit of information you’ll need is your NetSuite Account ID:
 
 You're ready to start using Census to load data from your warehouse to NetSuite! If you have any trouble with these steps, please don't hesitate to reach out to: support@getcensus.com and we'll help get this setup.
 
->
+&gt;
 
 ## 🏎 Sync Speed
 
@@ -182,6 +182,4 @@ Learn more about all of our sync behaviors on our [Core Concept page](../basics/
 ## 🚑 Need help connecting to NetSuite?
 
 [Contact us](mailto:support@getcensus.com) via support@getcensus.com or start a conversation with us via the [in-app](https://app.getcensus.com) chat.
-
-
 

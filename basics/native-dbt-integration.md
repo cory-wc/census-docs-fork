@@ -6,7 +6,7 @@ description: >-
 
 # dbt and dbt Cloud Integration
 
-Census supports connecting to an existing dbt project, which allows you to select models you want to make available to sync into all your business tools. This means you can keep all your source code & transforms in a single repository. 
+Census supports connecting to an existing dbt project, which allows you to select models you want to make available to sync into all your business tools. This means you can keep all your source code & transforms in a single repository.
 
 Census compiles your models on the fly whenever a sync is scheduled so your data and your models are always up to date. And Census is designed to work hand-in-hand with dbtCloud or any other dbt runner.
 
@@ -32,25 +32,23 @@ Once you’ve configured your project repository, Census will analyze your proje
 
 ## Integrating with dbt Cloud
 
-If you're using dbt Cloud to run your dbt project, our integration goes even further. You can configure Census to automatically run syncs whenever your models have been rebuilt. 
+If you're using dbt Cloud to run your dbt project, our integration goes even further. You can configure Census to automatically run syncs whenever your models have been rebuilt.
 
-{% embed url="https://www.loom.com/share/ae05a6dad7364972a06352b6c2599590" %}
+{% embed url="https://www.loom.com/share/ae05a6dad7364972a06352b6c2599590" caption="" %}
 
-
-
-To connect Census to your dbt Cloud, you'll first need a [dbt Cloud API](https://docs.getdbt.com/docs/dbt-cloud/dbt-cloud-api/service-tokens) key. 
+To connect Census to your dbt Cloud, you'll first need a [dbt Cloud API](https://docs.getdbt.com/docs/dbt-cloud/dbt-cloud-api/service-tokens) key.
 
 * You may use both User API keys and Service Account tokens. We strongly recommend you use Service Account tokens.
 * As of May 2021, according to dbt Cloud, tokens may only be created or modified by users with Account Admin \(Enterprise plan\) or Owner \(Team plan\) permissions on an account.
 
-With your token in hand, you can now connect dbt Cloud to your dbt project. 
+With your token in hand, you can now connect dbt Cloud to your dbt project.
 
 1. Configure your existing dbt project by clicking the ⚙️icon next to the git repo description.  ![](../.gitbook/assets/screely-1621909661599.png) 
 2. Then copy your dbt Cloud API key. This will load your dbt Cloud Projects.   ![](../.gitbook/assets/screely-1621909671396.png) 
 3. Select the dbt Cloud Project that matches you code repo / project. Yes, "project" annoyingly means two different things here, the trick here is to get them to match. The dbt Cloud Project should point to the exact same git repo and branch that you've configured for Census. 
 4. Finally hit save!
 
-Now, when you create syncs using dbt models as sources, you'll see this brand new way of triggering syncs. 
+Now, when you create syncs using dbt models as sources, you'll see this brand new way of triggering syncs.
 
 ![](../.gitbook/assets/screely-1621909681693.png)
 
@@ -62,7 +60,7 @@ Census doesn't necessarily require the same permissions your dbt project needs b
 
 ## Supported dbt features and versions
 
-Our dbt integration is designed to pair nicely with your existing dbt runner, whether dbt Cloud or self-hosted. We do this by using the `dbt compile` command rather than the typical `dbt run` and then make use of the compiled output only. 
+Our dbt integration is designed to pair nicely with your existing dbt runner, whether dbt Cloud or self-hosted. We do this by using the `dbt compile` command rather than the typical `dbt run` and then make use of the compiled output only.
 
 As a result, there's several dbt features that Census does not make use of. These include:
 

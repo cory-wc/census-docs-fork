@@ -23,7 +23,7 @@ In this guide, we will show you how to connect Marketo to Census and create your
 
 ### 1. Create a Marketo API User
 
-Before setting up API credentials for Census, you'll first need a Marketo Role with API Access, as well as a user with that role. 
+Before setting up API credentials for Census, you'll first need a Marketo Role with API Access, as well as a user with that role.
 
 #### API Access Role
 
@@ -74,7 +74,7 @@ Census currently supports syncing to the following Marketo objects.
 
 | **Object Name** | **Supported?** | Identifiers |
 | ---: | :---: | :--- |
-| Lead | ✅ | Object ID, any Text/Number  |
+| Lead | ✅ | Object ID, any Text/Number |
 | Named Account | ✅ | Object ID, any Text/Number |
 | Custom Objects | ✅ | Object ID, any Text/Number |
 | Static Lists | \(via Lead\) |  |
@@ -95,7 +95,7 @@ Learn more about all of our sync behaviors on our [Core Concepts page](../basics
 | **Mirror** | ✅ | Lead |
 
 {% hint style="warning" %}
-Please be aware that Update Only and Mirror make use of less efficient Marketo APIs and will result in more API usage for the same number of records. 
+Please be aware that Update Only and Mirror make use of less efficient Marketo APIs and will result in more API usage for the same number of records.
 {% endhint %}
 
 [Contact us](mailto:support@getcensus.com) if you want Census to support more Sync behaviors for Marketo.

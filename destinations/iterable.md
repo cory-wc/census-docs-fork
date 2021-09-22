@@ -27,7 +27,7 @@ In this guide, we will show you how to connect Iterable to Census and create you
 
 ### 1. Create a new Iterable API key
 
-To connect Census to your Iterable, you'll need to provide Census with an API key so that we can talk to it directly. 
+To connect Census to your Iterable, you'll need to provide Census with an API key so that we can talk to it directly.
 
 **A. Go to your Integration &gt; API keys page**
 
@@ -41,7 +41,7 @@ Click the Create New API key button in the top left.
 
 ![](../.gitbook/assets/iterable_setup2.png)
 
-Select the "Standard" key type from the subsequent dropdown. 
+Select the "Standard" key type from the subsequent dropdown.
 
 ![](../.gitbook/assets/iterable_setup3.png)
 
@@ -55,13 +55,13 @@ Copy the resulting key \(a string of 32 characters\) to add it to Census.
 
 ![](../.gitbook/assets/iterable_setup4.png)
 
-Iterable will now appear as a new destination for Census syncs. 
+Iterable will now appear as a new destination for Census syncs.
 
 ### 2. Syncing data into Iterable
 
 Once the service is added, you can sync users from your database into your Iterable audience \(and augment existing contacts with new product data\).
 
-When creating a sync in Census, you can use _email_ or _userId_ as an identifier. 
+When creating a sync in Census, you can use _email_ or _userId_ as an identifier.
 
 ![](../.gitbook/assets/iterable_setup5.png)
 
@@ -83,7 +83,7 @@ You can map data fields into your existing Iterable audience schema \(including 
 
 Iterable supports nested objects and fields on its User object. If you would like to send JSON, Arrays, or JSON Arrays to a field in Iterable, you may.
 
-For most data warehouses, there are specific datatypes for these types of values. However, Amazon Redshift does not natively support JSON, so you will want to store this type of data as a string value. Provided that the values are valid JSON, Census will ensure that it is nested as expected when sending the data to Iterable. 
+For most data warehouses, there are specific datatypes for these types of values. However, Amazon Redshift does not natively support JSON, so you will want to store this type of data as a string value. Provided that the values are valid JSON, Census will ensure that it is nested as expected when sending the data to Iterable.
 
 As an example, valid JSON for a field named "subscription" could have the following value:
 

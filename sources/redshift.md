@@ -56,7 +56,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA "<your schema>" GRANT EXECUTE ON FUNCTIONS TO
 
 dbt \(data build tool\) often requires permissions to be re-granted on objects after it rebuilds models. Census customers frequently extend permissions management on their dbt models in two ways:
 
-1.  **Fine-grained permissions** – By adding [post-hooks](https://docs.getdbt.com/reference/resource-configs/pre-hook-post-hook#grant-privileges-on-a-directory-of-models) in a dbt project, Census customers immediately grant access to the Census database user after each desired model builds.
+1. **Fine-grained permissions** – By adding [post-hooks](https://docs.getdbt.com/reference/resource-configs/pre-hook-post-hook#grant-privileges-on-a-directory-of-models) in a dbt project, Census customers immediately grant access to the Census database user after each desired model builds.
 2. **Access to all dbt tables and views \(Recommended\)** – Census customers change the default permissions of the database user for their production dbt runs so that any tables and views created by that users are accessible to the Census database user. In this case, we extend the `ALTER DEFAULT PRIVILEGES` to specifically indicate the defaults of the dbt production run user. 
 
 ```text
@@ -73,7 +73,7 @@ Because this is altering the default behavior of another user, this command must
 
 ## 🔑 Encryption
 
-All connections from the Census Data Warehouse Service to your database, as well as connections from your Redshift database to S3, are protected by TLS encryption - Census will refuse to connect to a warehouse that does not support TLS. All Census data stored in S3 is encrypted with AWS Server-Side Encryption \(SSE\). 
+All connections from the Census Data Warehouse Service to your database, as well as connections from your Redshift database to S3, are protected by TLS encryption - Census will refuse to connect to a warehouse that does not support TLS. All Census data stored in S3 is encrypted with AWS Server-Side Encryption \(SSE\).
 
 ## 🚦 Allowed IP Addresses
 
@@ -97,15 +97,15 @@ Census optionally allows connecting to Redshift that are only accessible on priv
 
 ![](../.gitbook/assets/redshift_pg_1.png)
 
-3. Once the connection is created, Census will generate a keypair for SSH authentication which can be accessed from the connections page. 
+1. Once the connection is created, Census will generate a keypair for SSH authentication which can be accessed from the connections page. 
 
-To install the kepair, copy the public key in Census to you clipboard and add it to the SSH authorized keys file on the SSH host for the user created in the first step.  If, for example, this user is named `census`, the file should be located at`/home/census/.ssh/authorized_keys`. You may need to create this file if it doesn't exist.
+To install the kepair, copy the public key in Census to you clipboard and add it to the SSH authorized keys file on the SSH host for the user created in the first step. If, for example, this user is named `census`, the file should be located at`/home/census/.ssh/authorized_keys`. You may need to create this file if it doesn't exist.
 
 Note that the keypair is unique for each Census Warehouse connection. Even if you're reusing the same credentials, you'll need to add the new public keys.
 
 ![](../.gitbook/assets/redshift_pg_2.png)
 
-4. If the SSH host restricts IP ranges that can connect to it, add the Census IPs to the allow list.
+1. If the SSH host restricts IP ranges that can connect to it, add the Census IPs to the allow list.
 
 With these steps complete, you should be able to complete a connection test, indicating that your tunneled connection is ready to be used in syncs.
 

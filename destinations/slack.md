@@ -47,9 +47,9 @@ See our docs for each supported data source for further information:
 
 Navigate to the **Models** page in Census and click the **Add Model** button.
 
-Here you can a write SQL query to select the data you want to send to Slack. 
+Here you can a write SQL query to select the data you want to send to Slack.
 
-Once you have created your model, give it a useful name, and click **Save Model**. 
+Once you have created your model, give it a useful name, and click **Save Model**.
 
 ## 4️⃣ Create your first Census sync
 

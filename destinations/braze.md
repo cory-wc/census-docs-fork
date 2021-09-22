@@ -8,7 +8,7 @@ description: This page describes how to use Census with Braze.
 
 In this guide, we will show you how to connect Braze to Census and create your first sync.
 
-{% embed url="https://youtu.be/qwa2BEuxEBs" %}
+{% embed url="https://youtu.be/qwa2BEuxEBs" caption="" %}
 
 ### Prerequisites
 
@@ -47,21 +47,20 @@ Finally, copy the long code you see under **Identifier**. We'll use that in a mi
 
 ### 2. Select your Braze API Endpoint
 
-Braze requires that we use a slightly different URL to access your account depending on where it's been set up. See the [full list of all Braze API Endpoints](https://www.braze.com/docs/api/basics/#endpoints). In general, you just need the number from the URL you see in your browser when you're signed into Braze.  
-  
-For example, if your Braze URL is https://dashboard-**03**.braze.com/, then your API Endpoint should be https://rest.iad-**03**.braze.com.
+Braze requires that we use a slightly different URL to access your account depending on where it's been set up. See the [full list of all Braze API Endpoints](https://www.braze.com/docs/api/basics/#endpoints). In general, you just need the number from the URL you see in your browser when you're signed into Braze.
+
+For example, if your Braze URL is [https://dashboard-\*\*03\*\*.braze.com/](https://dashboard-**03**.braze.com/), then your API Endpoint should be [https://rest.iad-\*\*03\*\*.braze.com](https://rest.iad-**03**.braze.com).
 
 ### 3. Create the Census Connection
 
-Great! Now let's pull it all together. 
+Great! Now let's pull it all together.
 
 1. In the **Settings** tab, Create a new Braze Service Connection in Census.  ![](../.gitbook/assets/screely-1619749986549.png) 
 2. You can provide whatever name you like.
 3. Provide the appropriate Braze Endpoint URL.
 4. Copy and paste your new Braze API key.  
 
-
-   ![](../.gitbook/assets/screely-1619749992320.png)
+![](../.gitbook/assets/screely-1619749992320.png)
 
 And you're all set and ready to get syncing! 🎉
 

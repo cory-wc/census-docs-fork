@@ -1,6 +1,6 @@
 # 🏡 Introduction
 
-## 👋 Welcome to Census! 
+## 👋 Welcome to Census!
 
 Census is a data integration platform that enables you to sync your customer & product data from cloud data warehouses like Redshift, Snowflake, BigQuery, Postgres, or Databricks to the apps your sales & marketing teams use.
 

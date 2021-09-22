@@ -8,7 +8,7 @@ description: This page describes how to use Census with Airtable.
 
 In this guide, we will show you how to connect Airtable to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=-NRDgN65rrg" %}
+{% embed url="https://www.youtube.com/watch?v=-NRDgN65rrg" caption="" %}
 
 ### Prerequisites
 
@@ -37,8 +37,6 @@ Note: Census's permissions will be the same as this Airtable user. If you think 
 3. Select **Airtable** from the list. ![](../.gitbook/assets/screely-1629998477683.png) 
 4. Add your API key to the modal and give your connection a memorable name. Save once you've got both! ![](../.gitbook/assets/screely-1629999170323.png) 
 
-
-
 ### 3. Connect your data warehouse
 
 If you don't already have a data warehouse connected, follow one of our short guides depending on your data warehouse service:
@@ -49,7 +47,7 @@ If you don't already have a data warehouse connected, follow one of our short gu
 * [Snowflake](https://help.getcensus.com/article/8-configuring-snowflake-access)
 * [Databricks](../sources/databricks.md)
 
-You should now have a connection to Airtable and to your data warehouse! Let's start syncing data. 
+You should now have a connection to Airtable and to your data warehouse! Let's start syncing data.
 
 ### 4. Create your first Model <a id="3-create-your-first-model"></a>
 
@@ -117,34 +115,34 @@ Airtable needs a primary key that is a short text field for Census to be able to
 <table>
   <thead>
     <tr>
-      <th style="text-align:center">Airtable Field Types</th>
+      <th style="text-align:left">Airtable Field Types</th>
       <th style="text-align:left">Source SQL Types</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:center">Short Text</td>
+      <td style="text-align:left">Short Text</td>
       <td style="text-align:left">
         <p>String</p>
         <p>Numeric</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:center">Single Select</td>
+      <td style="text-align:left">Single Select</td>
       <td style="text-align:left">
         <p>String</p>
         <p>Numeric</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:center">Checkbox</td>
+      <td style="text-align:left">Checkbox</td>
       <td style="text-align:left">
         <p>Boolean</p>
         <p>Numeric (nonzero = checked, 0 = unchecked)</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:center">The Rest</td>
+      <td style="text-align:left">The Rest</td>
       <td style="text-align:left">
         <p>Census will give an informative error</p>
         <p>message if rejected by Airtable &#x1F600;</p>

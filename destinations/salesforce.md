@@ -8,7 +8,7 @@ description: This page describes how to use Census with Salesforce.
 
 In this guide, we will show you how to connect Salesforce to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=K-qmPOweyUU" %}
+{% embed url="https://www.youtube.com/watch?v=K-qmPOweyUU" caption="" %}
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ In this guide, we will show you how to connect Salesforce to Census and create y
 
 ## 🔑 Required permissions
 
-Census connects to your Salesforce instance through a standard OAuth connection to an individual user account. We recommend using a stand-alone account specifically for Census \(often called a Service Account\) so you can see Census updates in your audit history. Census primarily uses the [Salesforce Bulk API](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm) to sync data to Salesforce in the most API quota-efficient way possible. 
+Census connects to your Salesforce instance through a standard OAuth connection to an individual user account. We recommend using a stand-alone account specifically for Census \(often called a Service Account\) so you can see Census updates in your audit history. Census primarily uses the [Salesforce Bulk API](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm) to sync data to Salesforce in the most API quota-efficient way possible.
 
 The objects and fields accessible to Census are all determined by the user account you use when connecting Census to your Salesforce instance. Census will have the same access as the user, so if fields are read-only or hidden for that user, they will be to Census. In general, you should give Census read and write access to all the objects and fields you may want to update.
 
@@ -45,7 +45,7 @@ Understanding identifiers on your source and destination objects is one of the m
 
 ### Default identifiers on Salesforce objects
 
-By default, every Salesforce object has an ID field. This ID is automatically generated and assigned whenever a new record is created, and can't be changed. This means the ID is completely under Salesforce's control. Census \(nor anyone else really!\) can set or update that ID. 
+By default, every Salesforce object has an ID field. This ID is automatically generated and assigned whenever a new record is created, and can't be changed. This means the ID is completely under Salesforce's control. Census \(nor anyone else really!\) can set or update that ID.
 
 Census can use the Salesforce ID field for **Update Only** syncs, but it cannot be used for Update or Create, or Create Only syncs.
 
@@ -62,7 +62,7 @@ Here's how to add a new External ID to your Salesforce Object:
 1. In Salesforce, go to **Setup**, open the **Object Manager**, and click on the Salesforce object you want to sync to.
 2. Select **Fields & Relationships** and press the **New** button in the top right.
 3. Select the type of field. You'll want to stick to the Text, Email, or Number types as most others cannot be made into an External ID in the next step. 
-4. Define your new ID field. The important part is that you check **External ID** AND **Unique.** You can choose between case sensitive and case insensitive. 
+4. Define your new ID field. The important part is that you check **External ID** AND **Unique.** You can choose between case sensitive and case insensitive.
 
    * Unique is strongly recommended. Without it, two records may have the same identifier value and Census can't ensure we're updating the correct record.
    * Case insensitive is a safer choice if you're ever going to have humans inputting values \(such as an email address\), but could in rare cases introduce a problem with computer-generated identifiers.
@@ -93,21 +93,21 @@ If this sounds like your situation, you have a couple of options. You may choose
 
 ## 🆘 Common Errors
 
-The is a running list of Salesforce errors that frequently cause skipped records on when syncing data to Salesforce.   
-  
+The is a running list of Salesforce errors that frequently cause skipped records on when syncing data to Salesforce.
+
 Keep in mind, Census will always retry syncing any records that are rejected by Salesforce so it's worth the effort to understand and address the cause of the issues. Once they're fixed, Census will sync any of the changes that had been missed.
 
 **DUPLICATES\_DETECTED:Use one of these records?:--**
 
 This error is caused when attempting to insert a new Account, Contact, or Lead record that Salesforce thinks is a duplicate of a record already in Salesforce. That "Use one of these records?" message is actually the title of a message you'd see if you were trying to do this manually in Salesforce. Unfortunately, it's not that helpful as an error message!
 
-Though Leads are separate objects from Contacts and Accounts, Salesforce has predefined duplication rules that check for duplicates between Lead and Contact/Account. You can [see the rules that define duplicates](https://help.salesforce.com/articleView?id=duplicate_rules_standard_rules.htm&type=5) and even define custom ones in Setup. Usually preventing duplicates is a great thing. The best way around this is to use Census's **Multi-destination Syncs** to sync to both Lead & Contact or Lead & Account at the same time.   
-  
+Though Leads are separate objects from Contacts and Accounts, Salesforce has predefined duplication rules that check for duplicates between Lead and Contact/Account. You can [see the rules that define duplicates](https://help.salesforce.com/articleView?id=duplicate_rules_standard_rules.htm&type=5) and even define custom ones in Setup. Usually preventing duplicates is a great thing. The best way around this is to use Census's **Multi-destination Syncs** to sync to both Lead & Contact or Lead & Account at the same time.
+
 In extreme cases, you can choose to turn off duplicate rules either only for the Census account, or entirely for your org. This is probably a bad idea, so proceed with caution!
 
 **CANNOT\_INSERT\_UPDATE\_ACTIVATE\_ENTITY:MyCoolTrigger: System.LimitException: SBQQ:Too many SOQL queries: 101**
 
-Salesforce limits the number of SOQL queries that can be executed in an individual batch transaction. Because Census uploads data in batches, any triggers associated with objects directly also need to handle large batches as well. 
+Salesforce limits the number of SOQL queries that can be executed in an individual batch transaction. Because Census uploads data in batches, any triggers associated with objects directly also need to handle large batches as well.
 
 The primary cause of this problem is doing SOQL queries within a loop. The fix for this is straightforward, raise the SOQL queries outside the loop! Look for any other causes where you can get by with reusing the results of one query rather than requesting multiple times.
 
@@ -123,7 +123,7 @@ If you're still having issues, please contact your Census representative. In som
 
 **INVALID\_CROSS\_REFERENCE\_KEY:INVALID CROSS REFERENCE ID**
 
-This error shows up when a sync is attempting to create a relationship using a Salesforce ID that doesn't actually exist in the particular Salesforce installation. This could happen if you are accidentally using a different type of ID as a Salesforce ID, but most often, we see this when trying to use Salesforce IDs that exist in one Salesforce environment but not the destination, for example, using Salesforce IDs that exist in production but that does not exist in a Salesforce Sandbox. 
+This error shows up when a sync is attempting to create a relationship using a Salesforce ID that doesn't actually exist in the particular Salesforce installation. This could happen if you are accidentally using a different type of ID as a Salesforce ID, but most often, we see this when trying to use Salesforce IDs that exist in one Salesforce environment but not the destination, for example, using Salesforce IDs that exist in production but that does not exist in a Salesforce Sandbox.
 
 **OAUTH\_APP\_BLOCKED this app is blocked by admin**
 
@@ -131,7 +131,7 @@ This error happens when Census is installed in Salesforce, but needs to be unblo
 
 **UNABLE\_TO\_LOCK\_ROW:unable to obtain exclusive access to this record or 200 records**
 
-This error occurs with highly automated or frequently changing Salesforce deployments. When Census is updating, it submits a batch of records to Salesforce. Salesforce splits up this batch into smaller sub batches and attempts to update them in a transaction. In this case, Salesforce was unable to create a transaction to update the specified records. 
+This error occurs with highly automated or frequently changing Salesforce deployments. When Census is updating, it submits a batch of records to Salesforce. Salesforce splits up this batch into smaller sub batches and attempts to update them in a transaction. In this case, Salesforce was unable to create a transaction to update the specified records.
 
 Typically, this is a transient issue and the next run of the sync won't have the same problem. However, if it persists, please contact your Census representative. In some cases, we can help control batch sizes being passed to Census.
 

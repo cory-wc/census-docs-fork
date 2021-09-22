@@ -52,7 +52,7 @@ Here you will have to write SQL queries to select the data you want to see in St
 * The attribution of the customer
 * Order form data to generate an invoice
 
-Once you have created your model, click save. 
+Once you have created your model, click save.
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5bb7d5d0042863158cc71f7e/images/5f6563834cedfd00173b9a49/file-zg53SxxpoO.png)
 
@@ -70,7 +70,7 @@ Next up is the "Where do you want to sync data to?" section
 * Pick Stripe as the Connection
 * For Object, pick **Customer**
 
-For the " How should changes to the source be synced?" section 
+For the " How should changes to the source be synced?" section
 
 * Select Update or Create
 * Pick the right mapping key, it can be Email or any other external id for Customer

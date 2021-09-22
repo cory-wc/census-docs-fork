@@ -6,7 +6,7 @@ description: >-
 
 # Snowflake
 
-{% embed url="https://www.loom.com/share/7deb8e90ddba47ef87382e73d00c62ac" %}
+{% embed url="https://www.loom.com/share/7deb8e90ddba47ef87382e73d00c62ac" caption="" %}
 
 ## 🔐 Required Permissions
 
@@ -91,10 +91,10 @@ GRANT USAGE ON FUTURE FUNCTIONS IN SCHEMA "<your database>"."<your schema>" TO R
 
 The script above creates a new virtual data warehouse \(execution environment\) for Census. This allows you to monitor and tune Census queries for the best balance of performance and speed.
 
-The script above creates the smallest available virtual warehouse \("X-Small"\) and configures it to aggressively auto-suspend if not in use, which makes the best use of your Snowflake account credits. However, some Census jobs \(especially involving lots of data or complex models\) will benefit from a larger warehouse. You can use Snowflake's [ALTER WAREHOUSE](https://docs.snowflake.com/en/sql-reference/sql/alter-warehouse.html) command to adjust the size of the CENSUS warehouse and tune it for your workload.  
-  
-Alternatively, if cost concerns are an issue, you can also share a warehouse with other batch processing systems \(for example Segment, Fivetran, dbt, etc\).   
-  
+The script above creates the smallest available virtual warehouse \("X-Small"\) and configures it to aggressively auto-suspend if not in use, which makes the best use of your Snowflake account credits. However, some Census jobs \(especially involving lots of data or complex models\) will benefit from a larger warehouse. You can use Snowflake's [ALTER WAREHOUSE](https://docs.snowflake.com/en/sql-reference/sql/alter-warehouse.html) command to adjust the size of the CENSUS warehouse and tune it for your workload.
+
+Alternatively, if cost concerns are an issue, you can also share a warehouse with other batch processing systems \(for example Segment, Fivetran, dbt, etc\).
+
 You may also want to [adjust the schedules](../basics/core-concept.md#scheduling-a-sync) of your Census syncs. Using Hourly and Daily syncs that are scheduled at the same time, rather than Continuous or every 15 minutes will give the largest continuous idle periods and save on account credits.
 
 ## 🔗 Using Snowflake on AWS VPS, PrivateLink, and Azure

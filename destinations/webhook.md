@@ -57,7 +57,7 @@ Here you will have to write SQL queries to select the data you want to send to y
 * Accounts that have reached a specific Lead scoring
 * list of users who haven't finished their product onboarding
 
-Once you have created your model, click save. 
+Once you have created your model, click save.
 
 ![](https://s3.amazonaws.com/helpscout.net/docs/assets/5bb7d5d0042863158cc71f7e/images/5f6563834cedfd00173b9a49/file-zg53SxxpoO.png)
 
@@ -75,7 +75,7 @@ Next up is the **"Where do you want to sync data to?"** section
 * Pick your Webhook destination \(for us it is `Webhook Test`\) as **the Connection**
 * ⚠️ If you are familiar with Census, you will notice that there is no Object to select.
 
-For the " **How should changes to the source be synced?"** section 
+For the " **How should changes to the source be synced?"** section
 
 * Select **Update or Create**
 * Pick a **unique ID.** this is the key we will use to make sure we only sync new records or records with new values. We recommend using an internal id and if not, email/domain.

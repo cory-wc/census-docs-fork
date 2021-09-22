@@ -8,7 +8,7 @@ description: This page describes how to use Census with HubSpot.
 
 In this guide, we will show you how to connect HubSpot to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=pkbmg-TmTiY&feature=emb\_title" %}
+{% embed url="https://www.youtube.com/watch?v=pkbmg-TmTiY&feature=emb\_title" caption="" %}
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ Here you will have to write SQL queries to select the data you want to see in Hu
 * The date they became active in your product
 * The number of key activities a user did in your app in the last 7/30 days
 
-Once you have created your model, click save. 
+Once you have created your model, click save.
 
 ![](https://s3.amazonaws.com/helpscout.net/docs/assets/5bb7d5d0042863158cc71f7e/images/5f6563834cedfd00173b9a49/file-zg53SxxpoO.png)
 
@@ -77,7 +77,7 @@ Next up is the **"Where do you want to sync data to?"** section
 * Pick HubSpot as **the Connection**
 * For Object, pick the one you want to sync data to; Contact or Company.
 
-For the " **How should changes to the source be synced?"** section 
+For the " **How should changes to the source be synced?"** section
 
 * Select **Update Only**
 * Pick the right mapping key, it could be Email for Contacts, Domain for Companies but we recommend you use your own internal id if possible
@@ -118,7 +118,7 @@ Please be aware that with custom object, we need to do extra call due to the lim
 
 | **Object Name** | **Supported?** | Identifiers |
 | ---: | :---: | :--- |
-| Company | ✅ | Object ID, any Text/Number  |
+| Company | ✅ | Object ID, any Text/Number |
 | Contact | ✅ | Object ID, any Text/Number |
 | Deal | ✅ | Object ID, any Text/Number |
 | Product | ✅ | Object ID, any Text/Number |

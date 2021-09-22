@@ -8,7 +8,7 @@ description: This page describes how to use Census with Customer.io.
 
 In this guide, we will show you how to connect Customer.io to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=sRYnagj\_gIE" %}
+{% embed url="https://www.youtube.com/watch?v=sRYnagj\_gIE" caption="" %}
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ In this guide, we will show you how to connect Customer.io to Census and create 
 
 ### 1. Collecting Customer.io API Credentials
 
-To connect Census to your Customer.io, you'll need to provide Census with a few credentials so that we can talk to it directly. 
+To connect Census to your Customer.io, you'll need to provide Census with a few credentials so that we can talk to it directly.
 
 ### **2. Go to your API Credentials page**
 
@@ -60,7 +60,7 @@ Finally, provide the Site ID and API Key you just created on Customer.io. You ca
 
 ![](../.gitbook/assets/cio_step7.png)
 
-Customer.io will now appear as a new destination for Census syncs.  🎉
+Customer.io will now appear as a new destination for Census syncs. 🎉
 
 ## 🏎 Sync Speed
 

@@ -10,7 +10,7 @@ description: >-
 
 In this guide, we will show you how to connect Facebook Ads to Census and create your first sync.
 
-{% embed url="https://www.youtube.com/watch?v=0\_jr7dv-FWE" %}
+{% embed url="https://www.youtube.com/watch?v=0\_jr7dv-FWE" caption="" %}
 
 ### Prerequisites
 
@@ -29,7 +29,7 @@ In this guide, we will show you how to connect Facebook Ads to Census and create
 
 ### 1. Collect the Facebook Audience ID
 
-The first step is finding the audience you'd like to sync data into. You can do that by visiting the [Audiences section of Facebook's Ads Manager](https://business.facebook.com/adsmanager/audiences). Make a note of the ID \(name will work too\) of the audience you want to sync to from Census. 
+The first step is finding the audience you'd like to sync data into. You can do that by visiting the [Audiences section of Facebook's Ads Manager](https://business.facebook.com/adsmanager/audiences). Make a note of the ID \(name will work too\) of the audience you want to sync to from Census.
 
 If you'd like to use a new Facebook Audience with Census, go ahead and create it now. Facebook Audiences makes it a bit confusing to create a new empty audience for Census. You'll need to create a new Customer List Custom Audience and then upload a CSV with the columns that you'll be using.
 
@@ -53,7 +53,7 @@ FROM user_activity_table;
 
 ### 3. Create a sync
 
-Now that your data is prepared and in the correct format, we're ready to start syncing users to Facebook. 
+Now that your data is prepared and in the correct format, we're ready to start syncing users to Facebook.
 
 #### **A. Select your model from above as a data source and Facebook Audiences as a destination.**
 
@@ -83,11 +83,11 @@ You can then map any user identifying fields that are present in your source dat
 
 ## Conversions
 
-Send web events directly to Facebook from your warehouse, exactly as if they were pixel events using the Facebook Conversions API. 
+Send web events directly to Facebook from your warehouse, exactly as if they were pixel events using the Facebook Conversions API.
 
 ### 1. Choose or create a conversion event in Facebook, Collect the Pixel ID
 
-To view all your Facebook Ads accounts' Pixel IDs go to the [Events Manager](https://www.facebook.com/business/help/898185560232180): [https://business.facebook.com/events\_manager2/list/](https://business.facebook.com/events_manager2/list/). 
+To view all your Facebook Ads accounts' Pixel IDs go to the [Events Manager](https://www.facebook.com/business/help/898185560232180): [https://business.facebook.com/events\_manager2/list/](https://business.facebook.com/events_manager2/list/).
 
 Be sure to select the specific ads account you want to work on. You can switch ad accounts in the navigation bar on the left side of the screen.
 
@@ -99,7 +99,7 @@ In your SQL model, dbt model, or table -- ensure that you have all required fiel
 
 #### A. Event ID
 
-Census requires the model to have a column that stores a unique identifier for each row so that Census never sends any duplicate records. We'll call this unique identifier column "Event ID". If you have an identifier that you are already passing via your pixel on the website for online versions of this conversion event, use this identifier. Some common examples include `user_id`, `lead_id`, and `order_id`.  
+Census requires the model to have a column that stores a unique identifier for each row so that Census never sends any duplicate records. We'll call this unique identifier column "Event ID". If you have an identifier that you are already passing via your pixel on the website for online versions of this conversion event, use this identifier. Some common examples include `user_id`, `lead_id`, and `order_id`.
 
 #### B. Minimum Event Parameters
 
@@ -153,9 +153,9 @@ Please [contact us](mailto:support@getcensus.com) if there are additional Facebo
 
 #### Data Normalization
 
-Facebook Audiences and Conversions are a bit unique from other services. We do not upload the data you provide directly. Instead, it's "matched" to Facebook's audience. To do this, both sides "hash" their data so users can be compared without revealing the actual personally identifiable information. 
+Facebook Audiences and Conversions are a bit unique from other services. We do not upload the data you provide directly. Instead, it's "matched" to Facebook's audience. To do this, both sides "hash" their data so users can be compared without revealing the actual personally identifiable information.
 
-Census automatically takes care of this hashing step for you. 
+Census automatically takes care of this hashing step for you.
 
 **However, all values provided to Census must be lowercase**. You can use this standard SQL function `LOWER()`that works across all data warehouses.
 
@@ -167,8 +167,8 @@ Census automatically takes care of this hashing step for you.
 | **Mirror** | ✅ | Audiences |
 | **Append** | ✅ | Conversions |
 
-Update or Create will add or update users to the audience, but will never remove users. Mirror will also remove users that have been removed from the source.   
-  
+Update or Create will add or update users to the audience, but will never remove users. Mirror will also remove users that have been removed from the source.
+
 Note: If you're reusing an existing Facebook Audience, Census will not remove any users already added to that audience through other means. Census only removes users that it created initially.
 
 {% hint style="info" %}
